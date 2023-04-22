@@ -131,10 +131,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\ImageMagick-7.1.1-Q16-HDRI\include;C:\Headers_std</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\ImageMagick-7.1.1-Q16-HDRI\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CORE_RL_Magick++_.lib;CORE_RL_MagickCore_.lib;CORE_RL_MagickWand_.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -182,7 +185,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="glut_backend.cpp" />
+    <ClCompile Include="lighting_technique.cpp" />
     <ClCompile Include="OpenGL_LAB_3.cpp" />
+    <ClCompile Include="pipeline.cpp" />
+    <ClCompile Include="math_3d.cpp" />
+    <ClCompile Include="technique.cpp" />
+    <ClCompile Include="texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="glut_backend.h" />
+    <ClInclude Include="lighting_technique.h" />
+    <ClInclude Include="math_3d.h" />
+    <ClInclude Include="pipeline.h" />
+    <ClInclude Include="technique.h" />
+    <ClInclude Include="texture.h" />
+    <ClInclude Include="util.h" />
+    <ClInclude Include="сallbacks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
